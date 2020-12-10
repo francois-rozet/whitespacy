@@ -72,6 +72,7 @@ def merge(code: str, white: str) -> str:
 
 
 def whitifyC(code: str, white: str) -> str:
+    white = ''.join(filter(lambda x: x in ' \t\n', white))
     code, strings = minifyC(code, apart=True)
     whitified = ''
 
