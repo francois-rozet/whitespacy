@@ -29,17 +29,19 @@ def indices_split(string: str, indices: list): # -> list[str]
     return splits
 
 
-def random_chunk(string: str, n: int, lower: int = 0): # -> list[str]
+def random_chunk(string: str, n: int): # -> list[str]
     widths = []
     remain = len(string)
 
-    for i in range(n):
-        widths.append(random.randint(lower, remain - (n - i - 1) * lower))
+    while n > 1:
+        r = random.betavariate(alpha=2, beta=8)
+        widths.append(int(r * remain))
         remain -= widths[-1]
+        n -= 1
 
     random.shuffle(widths)
 
-    indices = list(itertools.accumulate(widths))[:-1]
+    indices = list(itertools.accumulate(widths))
     chunks = indices_split(string, indices)
 
     return chunks
