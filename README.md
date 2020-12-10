@@ -55,8 +55,8 @@ and a basic "Hello, World!" Whitespace program (see [`hello-world.ws`](hello-wor
 
 Then, running the command
 
-```bash
-python whitespacy.py hello-world.c hello-world.ws -o polyglot.c
+```console
+$ python whitespacy.py hello-world.c hello-world.ws -o polyglot.c
 ```
 
 produces the [`polyglot.c`](polyglot.c) file
@@ -96,9 +96,9 @@ min(13,31
 
 which, can be compiled with `gcc` (`clang`)
 
-```bash
-gcc polyglot.c -o polyglot
-./polyglot
+```console
+$ gcc polyglot.c -o polyglot
+$ ./polyglot
 Hello, World!
 nice.
 ```
