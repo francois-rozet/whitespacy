@@ -8,7 +8,7 @@ It takes as input a valid C file and a valid Whitespace file, and produces, as o
 
 ## But why ?
 
-The goal of the project was to demonstrate that it is possible to embbed a fully functionnal Whitespace program withing the whitespace characters (` `, `\t` and `\n`) of a program written in another language.
+The goal of the project was to demonstrate that it is possible to embbed a fully functionnal Whitespace program within the whitespace characters (` `, `\t` and `\n`) of a program written in another language.
 
 Is it useless ? For sure. Is it trivial ? Hell no.
 
